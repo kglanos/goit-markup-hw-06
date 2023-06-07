@@ -29,6 +29,9 @@
     --what-we-do-shadow: rgba(47, 48, 58, 0.8);
     --background-overlay: #2196F3E5;
     --shadow-window: rgba(0, 0, 0, 0.2);
+    --border-email: #FFFFFF4D;
+    --email-footer: #FFFFFF99;
+    --input-form-border: #21212133;
 }
 
 * {
@@ -571,7 +574,6 @@ img {
         letter-spacing: 0.03em;
         color: var(--primary-bg-color);
         display: block;
-        margin-right: 20px;
 }
 
 .buttons {
@@ -639,11 +641,13 @@ img {
         font-family: Roboto;
         font-size: 14px;
         font-weight: 700;
-        line-height: 16px;
+        line-height: 1,17;
         letter-spacing: 0.03em;
+        text-transform: uppercase;
         text-align: left;
         margin-top: 0;
         margin-bottom: 20px;
+        font: inherit;
 }
 .footer-list-icon {
         display: flex;
@@ -674,6 +678,8 @@ a:link {
         color: var(--primary-bg-color);
         font-style: normal;
 }
+
+/*okno wyskakujące*/
 
 .backdrop {
         position: fixed;
@@ -716,4 +722,103 @@ a:link {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+}
+
+/*okno wyskakujące - stylizacja*/
+
+.order-title {
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+}
+
+.modal-title {
+        font-family: Roboto;
+        font-weight: 700;
+        size: 20px;
+        line-height: 1,17;
+        letter-spacing: 0.03em;
+        text-align: center;
+        padding-bottom: 30px;
+}
+
+.form-title {
+        padding-right: 15px;
+        
+}
+
+.form-input {
+        width: 448px;
+        height: 40px;
+        background-color: inherit;
+        border: 1px solid var(--input-form-border);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 42px;
+}
+
+.form-input textarea {
+        width: 448px;
+                height: 120px;
+                background-color: inherit;
+                border: 1px solid var(--input-form-border);
+                border-radius: 4px;
+                padding: 12px 16px;
+                resize: none;
+                display: block;
+}
+
+.service-icon {
+        position: relative;
+        bottom: 28px; 
+        left: 15px;
+        fill: var(--primary-text-color);
+}
+
+
+/* Newsletter-stopka*/
+
+.footer-newsletter {
+        margin-top: 72px;
+        margin-left: 78px;
+}
+
+.input-newsletter {
+        width: 358px;
+        height: 50px;
+        background-color: inherit;
+        border: 1px solid var(--border-email);
+        border-radius: 4px;
+        padding-left: 16px;
+        color: var(--primary-bg-color);
+}
+
+.button-footer {
+        display: flex;
+        color: var(--primary-bg-color);
+        background-color: var(--logo-web-color);
+        font-weight: 700;
+        line-height: 1.87;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        width: 200px;
+        justify-content: center;
+}
+
+.input-send{
+        display: flex;
+        margin-top: 20px;
+        gap: 12px;
+}
+
+.icon-footer {
+        display: flex;
+        align-items: center;
+        fill: var(--primary-bg-color);
+        margin: 3px 0 0 24px;
+        cursor: pointer;
 }
