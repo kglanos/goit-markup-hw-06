@@ -756,11 +756,9 @@ a:link {
         display: flex;
         flex-direction: column;
         padding: 0 0 0 42px;
+        margin: 10px 0 4px 0;
 }
 
-.form-label {
-        margin-bottom: 4px;
-}
 
 .textarea {
         width: 448px;
@@ -775,7 +773,7 @@ a:link {
 
 .service-icon {
         position: relative;
-        bottom: 28px; 
+        bottom: 31px; 
         left: 15px;
         fill: var(--primary-text-color);
 }
@@ -814,7 +812,6 @@ a:link {
 
 .button-form {
         margin-top: 30px;
-        margin-bottom: 40px;
         margin-left: 124px;
 }
 
@@ -838,11 +835,21 @@ a:link {
         width: 16px;
         height: 15px;
         z-index: 10;
-        -moz-appearance: none;
-        -webkit-appearance: none;
         appearance: none;
 }
 
+.form-input:focus {
+        outline: 1px solid var(--logo-web-color);
+        transition-property: outline;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
+}
+.form-input:focus+svg {
+        fill: var(--logo-web-color);
+        transition-property: fill;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
+}
 
 /* Newsletter-stopka*/
 
@@ -877,7 +884,8 @@ a:link {
         box-shadow: 0px 4px 4px var(--shadow-main-button);
 }
 
-.button-footer:focus {
+.input-newsletter:focus {
+        outline: 1px solid var(--logo-web-color);
         transition-duration: var(--default-time);
         transition-timing-function: var(--default-time-function);
 }
