@@ -736,7 +736,7 @@ a:link {
         font-family: Roboto;
         font-weight: 700;
         size: 20px;
-        line-height: 1,17;
+        line-height: 1.17;
         letter-spacing: 0.03em;
         text-align: center;
         padding-bottom: 30px;
@@ -758,15 +758,19 @@ a:link {
         padding: 0 0 0 42px;
 }
 
-.form-input textarea {
+.form-label {
+        margin-bottom: 4px;
+}
+
+.textarea {
         width: 448px;
-                height: 120px;
-                background-color: inherit;
-                border: 1px solid var(--input-form-border);
-                border-radius: 4px;
-                padding: 12px 16px;
-                resize: none;
-                display: block;
+        height: 120px;
+        background-color: inherit;
+        border: 1px solid var(--input-form-border);
+        border-radius: 4px;
+        padding: 12px 16px;
+        resize: none;
+        display: block;
 }
 
 .service-icon {
@@ -774,6 +778,69 @@ a:link {
         bottom: 28px; 
         left: 15px;
         fill: var(--primary-text-color);
+}
+
+.statute-text {
+        font-family: Roboto;
+        font-weight: 400;
+        size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        color: var(--title-text-color);
+        text-align: center;
+}
+.label-checkbox a{
+        text-decoration: underline;
+        color: var(--logo-web-color);
+}
+
+.label-checkbox {
+        display: flex;
+        position: relative;
+        margin: 20px 0 30px 15px;
+        gap: 8px;
+}
+
+.checkbox-icon {
+        position: absolute;
+        fill: var(--primary-bg-color);
+        border-radius: 2px;
+        visibility: hidden;
+        scale: 0;
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
+        transition-property: bacground-color, visibility, scale;
+}
+
+.button-form {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        margin-left: 124px;
+}
+
+.hidden-checkbox:checked~.checkbox-icon {
+        visibility: visible;
+        background-color: var(--logo-web-color);
+        scale: 1;
+}
+
+.hidden-checkbox:checked~.checkbox-icon-unchecked {
+        scale: 0;
+}
+
+.checkbox-icon-unchecked {
+        position: absolute;
+        scale: 1;
+        transition: scale, 0.2s
+}
+
+.hidden-checkbox {
+        width: 16px;
+        height: 15px;
+        z-index: 10;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
 }
 
 
@@ -807,6 +874,12 @@ a:link {
         padding: 10px;
         width: 200px;
         justify-content: center;
+        box-shadow: 0px 4px 4px var(--shadow-main-button);
+}
+
+.button-footer:focus {
+        transition-duration: var(--default-time);
+        transition-timing-function: var(--default-time-function);
 }
 
 .input-send{
